@@ -21,7 +21,7 @@ public class Categoria implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCategoria;
+    private Long ID_Categoria;
 
     @NotBlank(message = "El nombre de la categoría es obligatorio")
     @Size(min = 3, max = 50, message = "El nombre de la categoría debe tener entre 3 y 50 caracteres")

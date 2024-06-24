@@ -28,12 +28,6 @@ public class SesionController {
         return sesionService.save(sesion);
     }
 
-    @PutMapping("/{id}")
-    public Sesion update(@PathVariable Long id, @RequestBody Sesion sesion) {
-        sesion.setIdSesion(id);
-        return sesionService.save(sesion);
-    }
-
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         sesionService.deleteById(id);

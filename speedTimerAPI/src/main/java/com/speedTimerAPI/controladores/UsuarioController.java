@@ -28,12 +28,6 @@ public class UsuarioController {
         return usuarioService.save(usuario);
     }
 
-    @PutMapping("/{id}")
-    public Usuario update(@PathVariable Long id, @RequestBody Usuario usuario) {
-        usuario.setIdUsuario(id);
-        return usuarioService.save(usuario);
-    }
-
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         usuarioService.deleteById(id);

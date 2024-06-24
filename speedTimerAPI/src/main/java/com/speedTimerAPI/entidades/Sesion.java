@@ -20,7 +20,7 @@ public class Sesion implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idSesion;
+    private Long ID_Sesion;
 
     @ManyToOne
     @JoinColumn(name = "ID_Usuario", nullable = false)
