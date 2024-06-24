@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
@@ -26,8 +27,8 @@ public class Intento implements Serializable {
     @JoinColumn(name = "ID_Sesion", nullable = false)
     private Sesion sesion;
 
-    @Column(nullable = false, precision = 10, scale = 2)
-    private Double tiempo;
+    @Column(nullable = false)
+    private long Tiempo;
 
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)

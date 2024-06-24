@@ -33,8 +33,8 @@ public class RecordGlobal implements Serializable {
     @Column(nullable = false, length = 50)
     private String tipoRecord;
 
-    @Column(nullable = false, precision = 10, scale = 2)
-    private Double valor;
+    @Column(nullable = false)
+    private long valor;
 
     @Column(nullable = false)
     @Temporal(TemporalType.DATE)
