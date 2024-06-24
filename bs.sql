@@ -41,6 +41,9 @@ CREATE TABLE Intentos (
     FOREIGN KEY (ID_Sesion) REFERENCES Sesiones(ID_Sesion)
 );
 
+-- Modificar el tipo de dato de la columna Tiempo a int
+ALTER TABLE Intentos MODIFY COLUMN Tiempo int NOT NULL;
+
 -- Creación de la tabla Records de Sesión
 CREATE TABLE RecordsSesion (
     ID_RecordSesion INT AUTO_INCREMENT PRIMARY KEY,
@@ -49,6 +52,8 @@ CREATE TABLE RecordsSesion (
     Valor DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (ID_Sesion) REFERENCES Sesiones(ID_Sesion)
 );
+
+ALTER TABLE RecordsSesion MODIFY COLUMN Valor int NOT NULL;
 
 -- Creación de la tabla Records Globales
 CREATE TABLE RecordsGlobales (
@@ -61,3 +66,5 @@ CREATE TABLE RecordsGlobales (
     FOREIGN KEY (ID_Usuario) REFERENCES Usuarios(ID_Usuario),
     FOREIGN KEY (ID_Categoria) REFERENCES Categorias(ID_Categoria)
 );
+
+ALTER TABLE RecordsGlobales MODIFY COLUMN Valor int NOT NULL;
